@@ -27,7 +27,7 @@ def freq_stack(freq):
 c_lst = {"Shower" : freq_stack(3), "Toilet" : freq_stack(1), "Bathroom Sink/Counter" : freq_stack(2), "Kitchen Stove" : freq_stack(3), "Kitchen Counters" : freq_stack(3)}
 
 for curr_date in daterange(start_date, end_date):
-    # UPDATE: start time : 10 AM EST
+    # UPDATE: start time : 10 AM PST
     time_start = 18 
     for chore in c_lst.keys():
         due = c_lst[chore].pop()
