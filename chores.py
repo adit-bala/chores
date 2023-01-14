@@ -3,10 +3,11 @@ from datetime import date, time, datetime, timedelta
 from collections import deque
 
 chores_cal = Calendar(creator="adit-bala")
+# UPDATE : start date and end date
 start_date, end_date = date(2023, 1, 21), date(2023, 5, 6) 
 weeks = (int((end_date - start_date).days) + 7) // 7
 
-# roommates
+# UPDATE: roommates
 mates = ["adit", "Ollie", "Rouxles", "Zoro"]
 # cyclic rotation to distribute chores
 cycle_index = deque(list(range(1, len(mates) + 1)))
@@ -22,11 +23,11 @@ def freq_stack(freq):
     cycle_index.rotate(-1)
     return [0 if day % freq else next(mate_cycle) for day in range(weeks)]
 
-# key : chores, value : frequency (every other _ week)
+# UPDATE: key : chores, value : frequency (every other _ week)
 c_lst = {"Shower" : freq_stack(3), "Toilet" : freq_stack(1), "Bathroom Sink/Counter" : freq_stack(2), "Kitchen Stove" : freq_stack(3), "Kitchen Counters" : freq_stack(3)}
 
 for curr_date in daterange(start_date, end_date):
-    # start time : 10 AM EST
+    # UPDATE: start time : 10 AM EST
     time_start = 18 
     for chore in c_lst.keys():
         due = c_lst[chore].pop()
