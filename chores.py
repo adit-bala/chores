@@ -8,7 +8,7 @@ from tkinter import ttk
 
 chores_cal = Calendar(creator="NAME")
 
-#KESHAV: UPDATE: time-zone variable
+# UPDATE: time-zone variable
 timezone = 'US/Pacific'
 
 # UPDATE : start date and end date
@@ -31,7 +31,7 @@ def freq_stack(freq):
     cycle_index.rotate(-1)
     return [0 if day % freq else next(mate_cycle) for day in range(weeks)]
 
-# UPDATE: key : chores, value : frequency (every other _ week)
+# UPDATE: key : chores, value : frequency (every _ week(s))
 c_lst = {"Shower" : freq_stack(3), "Toilet" : freq_stack(1), "Bathroom Sink/Counter" : freq_stack(2), "Kitchen Stove" : freq_stack(3), "Kitchen Counters" : freq_stack(3)}
 
 for curr_date in daterange(start_date, end_date):
