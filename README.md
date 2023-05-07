@@ -21,6 +21,10 @@ pip install ics
 
 To personalize the calendar, adjust the lines that have the `# UPDATE` above them with the appropriate value 
 
+### Visualizer
+Shows the chores sorted in a table for users to see. Example is below: 
+![example image](example.png)
+
 ### Exporting
 
 To export your calendar to an .ics file, run `chores.py` in your terminal
